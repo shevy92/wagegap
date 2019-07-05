@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <style>
+        .window {
+            
+        }
+        #hotspot {
+            width:140px;
+            height:120px;
+            z-index: 1000;
+            position: absolute;
+            margin-top: -160px;
+            margin-left: 460px;
+        }
+        #hotspot h1 {
+            color: aliceblue;
+            font-family: sans-serif;
+            font-size: 20px;
+            background-color: dimgray;
+            text-align: center;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+ 
+     <div class="window">
+         <img id="toChange" src="images/unitedstates.png" alt="unitedstates">
+         <div href="" onClick="changeImage()" id="hotspot">
+             <h1>Explore more</h1>
+         </div>
+     </div>
+ 
+ 
+ 
+    <script>
+        function changeImage() {
+            var image = document.getElementById('toChange');
+            if (image.src.match("images/unitedstates.png")) {
+                image.src = "images/florida.png";
+            }
+            else if (image.src.match("images/florida.png")) {
+                image.src = "images/miami.png";
+            }
+            else {
+                image.src = "images/unitedstates.png";
+            }
+        }
+    </script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</body>
+</html>
